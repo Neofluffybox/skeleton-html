@@ -1,0 +1,45 @@
+body {
+    border: 5px solid black;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 75px 75px 75px 75px 75px 75px;
+    grid-template-rows: 100px 500px 100px;
+    grid-template-areas: 
+        "header header header header header header"
+        "left left middle middle right right"
+        "footer footer footer footer footer footer"
+}
+
+header {
+    border: 5px solid green;
+    grid-area: header;
+    padding: 20px;
+}
+
+nav {
+    border: 5px solid blue;
+    grid-area: left;
+}
+
+    nav div{
+        border: 5px solid grey;
+    }
+
+section {
+    border: 5px solid red;
+    grid-area: middle;
+}
+
+article {
+    border: 5px solid violet;
+}
+
+aside{
+    border: 5px solid orange;
+    grid-area: right;
+}
+
+footer{
+    border: 5px solid brown;
+    grid-area: footer;
+}
