@@ -17,6 +17,57 @@
     <article></article>
     <aside></aside>
     <footer></footer>
+    <script>
+        function realgame() {
+            alert("We're going to play rock, paper, scissors!");
+            let times = parseInt(prompt("how many rounds would you like to play?"));
+            function game(outOf, numbr) {
+                for (end = 0; end < outOf; outOf--) {
+                    let intro = "round: " + numbr;
+                    alert(intro);
+                    numbr++;
+                    let choice = prompt("Will you choose rock, paper, or scissors?");
+                    let options = ["rock", "paper", "scissors"];
+                    let rchoice = Math.floor(Math.random() * options.length);
+                    let player1 = choice;
+                    let player2 = options[rchoice];
+                    alert("computer chose " + player2 + "!");
+                    if (player1 === player2) {
+                        alert("it's a tie!");
+                    } else if (player1 == "rock") {
+                        if (player2 == "paper") {
+                            alert("you lose!");
+                        } else if (player2 == "scissors") {
+                            alert("you win!");
+                        } else {
+                            alert("no game");
+                        };
+                    } else if (player1 == "paper") {
+                        if (player2 == "rock") {
+                            alert("you win!");
+                        } else if (player2 == "scissors") {
+                            alert("you lose!");
+                        } else {
+                            alert("no game");
+                        };
+                    } else if (player1 == "scissors") {
+                        if (player2 == "rock") {
+                            alert("you lose!");
+                        } else if (player2 == "paper") {
+                            alert("you win!");
+                        } else {
+                            alert("no game");
+                        };
+                    } else {
+                        alert("invalid input");
+                    };
+                }
+                numbr += 1;
+            }
+            game(times, 1);
+        }
+        realgame()
+    </script>
 </body>
 
 </html>
