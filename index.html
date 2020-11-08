@@ -29,7 +29,7 @@
                     let choice = prompt("Will you choose rock, paper, or scissors?");
                     let options = ["rock", "paper", "scissors"];
                     let rchoice = Math.floor(Math.random() * options.length);
-                    let player1 = choice;
+                    let player1 = choice.toLowerCase();
                     let player2 = options[rchoice];
                     alert("computer chose " + player2 + "!");
                     if (player1 === player2) {
