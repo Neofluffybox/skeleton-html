@@ -20,9 +20,12 @@
     <script>
         function priceAnalyzer() {
             let speech = parseInt(prompt("What is your Speech stat great dragonborn?"));
-            let buyCurrentValue = 3.3 - (speech * .13);
-            let sellCurrentValue = .303 + (speech * .0297);
-            alert("You buy for " + buyCurrentValue.toFixed(2) + "\nYou sell for " + sellCurrentValue.toFixed(2));
+            let itemValue = parseInt(prompt("What is the value of the item you're pricing?"));
+            let buyCurrentValue = 3.3 - (speech * .013);
+            let sellCurrentValue = .303 + (speech * .00297);
+            let itemBuyPrice = buyCurrentValue * itemValue;
+            let itemSellPrice = sellCurrentValue * itemValue;
+            alert("Your Speech is: " + speech + "\nYou buy for " + buyCurrentValue.toFixed(2) + " times the item value." + "\nYou sell for " + sellCurrentValue.toFixed(2) + " times the item value.\n" + "Your items value is: " + itemValue + "\nYou will sell your item for " + itemSellPrice + " plus your perk bonuses.\nYou could buy this item for " + itemBuyPrice + " plus your perk bonuses.");
         }
         priceAnalyzer()
         function realgame() {
