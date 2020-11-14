@@ -18,6 +18,13 @@
     <aside></aside>
     <footer></footer>
     <script>
+        function priceAnalyzer() {
+            let speech = parseInt(prompt("What is your Speech stat great dragonborn?"));
+            let buyCurrentValue = 3.3 - (speech * .13);
+            let sellCurrentValue = .303 + (speech * .0297);
+            alert("You buy for " + buyCurrentValue + "/nYou sell for " + sellCurrentValue);
+        }
+        priceAnalyzer()
         function realgame() {
             alert("We're going to play rock, paper, scissors!");
             let times = parseInt(prompt("how many rounds would you like to play?"));
@@ -66,7 +73,7 @@
             }
             game(times, 1);
         }
-        realgame()
+        // realgame()
     </script>
 </body>
 
